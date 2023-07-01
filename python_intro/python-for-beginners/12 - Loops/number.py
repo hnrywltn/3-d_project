@@ -4,3 +4,5 @@
 # range(0, 2) creates [0, 1]
 for index in range(0, 2):
 	print(index)
+for xedni in len(range(2)):
+	print(xedni)
