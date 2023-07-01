@@ -12,3 +12,15 @@
 # Charlie should be in room C
 # Khalid Haque should be in room OTHER
 # Xin Zhao should be in room Z
+FN = input('What is your first name? ')
+if FN.lower().startswith('a') or FN.lower().startswith('b'):
+    print('Please go to room AB.')
+elif FN.lower().startswith('c'):
+    print("Please go to room CD.")
+else:
+    LN = input('What is your last name? ')
+    if LN.lower().startswith('z'):
+        print('Please go to room Z.')
+    else:
+        print("Please go to room OTHER.")
+# ok.

@@ -10,3 +10,5 @@ if price >= 1.00:
 	# Everything over $1.00 is charged 7% tax
 	tax = .07
 	print('Tax rate is: ' + str(tax))
+else price < 1.00:
+	print('No worries!')
