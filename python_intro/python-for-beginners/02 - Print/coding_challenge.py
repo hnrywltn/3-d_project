@@ -42,5 +42,25 @@
 #     if dogtime == 'I have' or 'yes'
 # else:
 #     print('sorry, we dont have an answer for that response.')
-FN = input('test')
-print(FN[0])
+# FN = input('test')
+# print(FN[0])
+
+# print("Hello, world")
+# pop = input('did a balloon pop?')
+# print(pop)
+
+
+list1 = ['ethan', 'roman', 'ivy', 'sophiaaaaaa']
+print(list1)
+dic1 = {
+    'Ethan' : 'Roman',
+    'Sophiaaa' : 'Ivy'
+}
+print(dic1['Ethan'])
+def function1(name):
+    if name.startswith('E') or name.startswith('R'):
+        print('ur cool')
+    else:
+        print('sophiaaaa / Ivy, ur bad.')
+personname = input('what is ur name (use capital for first letter. )')
+function1(personname)
