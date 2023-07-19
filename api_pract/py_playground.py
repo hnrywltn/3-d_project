@@ -1,3 +1,136 @@
+# Write a function dynamic_duos that accepts a string as an argument
+# and returns the count of the number of times the same character
+# appears consecutively in the given string.
+
+def dynamic_duos(string):
+    # your code here
+
+
+print(dynamic_duos('bootcamp'))     # 1
+print(dynamic_duos('wxxyzz'))       # 2
+print(dynamic_duos('hoooraay'))     # 3
+print(dynamic_duos('dinosaurs'))    # 0
+print(dynamic_duos('e'))            # 0
+
+
+
+
+
+
+
+# Writen a function potent_product that accepts a list of numbers and
+# a product as arguments. The function should return a boolean indicating
+# whether or not a pair of distinct elements in the list result in the
+# product when multiplied together. You may assume that the input list
+# contains unique elements.
+
+def potent_product(numbers, product):
+    # your code here
+
+print(potent_product([4, 2, 5, 8], 16))    # True
+print(potent_product([8, 1, 9, 3], 8))     # True
+print(potent_product([3, 4], 12))          # True
+print(potent_product([3, 4, 6, 2, 5], 12)) # True
+print(potent_product([4, 2, 5, 7], 16))    # False
+print(potent_product([8, 4, 9, 3], 8))     # False
+print(potent_product([3], 12))             # False
+
+
+
+
+
+
+
+# Write a function savvy_sums that accepts a list of numbers as an
+# argument. The function should return a count of the number of
+# distinct pairs of elements that have a sum of zero. You may
+# assume that the input list contains unique elements.
+
+def savvy_sums(numbers):
+    # your code here
+
+print(savvy_sums([2, -3, 3, 4, -2]))     # 2
+print(savvy_sums([42, 3, -1, -42]))      # 1
+print(savvy_sums([-5, 5]))               # 1
+print(savvy_sums([19, 6, -3, -20]))      # 0
+print(savvy_sums([9]))                   # 0
+
+
+
+
+
+
+# Write a function rational_repeats that accepts a string and a
+# dictionary as arguments. The function should return a new string
+# where characters of the original string are repeated the number
+# of times specified by the dictionary. If a character does not
+# exist as key of the dictionary, then it should remain unchanged.
+
+def rational_repeats(string, d):
+    # your code here
+
+print(rational_repeats('taco', {'a':3, 'c':2}))
+# 'taaacco'
+print(rational_repeats('feverish', {'e':2, 'f':4, 's':3}))
+# 'ffffeeveerisssh'
+print(rational_repeats('misispi', {'s':2, 'p':2}))
+# 'mississppi'
+print(rational_repeats('faarm', {'e':3, 'a':2}))
+# 'faaaarm'
+
+
+
+
+
+
+
+
+
+# Write a function cryptic_conversion that accepts a sentence as an argument.
+# The function should translate the sentence according to the following rules:
+
+# words that are shorter than 3 characters are unchanged
+
+# words that are 3 characters or longer are translated according to the following rules:
+    # if the word begins with a vowel, simply add 'yay' to the end of the word (example: 'eat'->'eatyay')
+    # if the word begins with a non-vowel, move all letters that come before the word's first vowel to the end of the word and add 'ay' (example: 'trash'->'ashtray')
+# Note that if words are capitalized in the original sentence, they should remain capitalized in the translated sentence. Vowels are the letters a, e, i, o, u.
+
+def cryptic_conversion(sentence):
+    # your code here
+
+print(cryptic_conversion('We like to eat bananas')) # "We ikelay to eatyay ananasbay"
+print(cryptic_conversion('I cannot find the trash')) # "I annotcay indfay ethay ashtray"
+print(cryptic_conversion('What an interesting problem')) # "Atwhay an interestingyay oblempray"
+print(cryptic_conversion('Her family flew to France')) # "Erhay amilyfay ewflay to Ancefray"
+print(cryptic_conversion('Our family flew to France')) # "Ouryay amilyfay ewflay to Ancefray"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #playing around
 # testvariable = 8
 # lr = list(range(testvariable))
