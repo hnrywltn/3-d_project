@@ -137,34 +137,57 @@ print('_____________________________________________________')
     # if the word begins with a non-vowel, move all letters that come before the word's first vowel to the end of the word and add 'ay' (example: 'trash'->'ashtray')
 # Note that if words are capitalized in the original sentence, they should remain capitalized in the translated sentence. Vowels are the letters a, e, i, o, u.
 
+
 def cryptic_conversion(sentence):
-    # your code here
-    sentence = sentence.split()
-    wreturn = ''
-    sreturn = ''
-    nvset = ''
-    vset = ''
-    for i in sentence:
-        wreturn = i
-        if len(i) >= 3:
-            if i.lower().startswith('a') or i.lower().startswith('e') or i.lower().startswith('i') or i.lower().startswith('o') or i.lower().startswith('u'):
-                wreturn += 'yay'
-            else:
-                continuecons = True
-                conscount = -1
-                vset = ''
-                nvset = ''
-                for u in i:
-                    if u.lower() == 'a' or u.lower() == 'e' or u.lower() == 'i' or u.lower() == 'o' or u.lower() == 'u':
-                        continuecons = False
-                    else:
-                        if continuecons == True:
-                            nvset += u
-                    if continuecons == False:
-                        vset += u
-                wreturn = vset + nvset + 'ay'
-        sreturn = sreturn + ' ' + wreturn
-    return sreturn
+    words = sentence.split(' ')
+    new_words = []
+    for word in words:
+        if len(word) < 3:
+            new_words.append(word)
+        else:
+            new_words.append(convert_word(word))
+    return ' '.join(new_words)
+
+
+def convert_word(word):
+    vowels = 'aeiouAEIOU'
+    if word[0] in vowels:
+        return word + 'yay'
+    for i in range(len(word)):
+        letter = word[i]
+        if letter in vowels:
+            return word[i:] + word[:i] + 'ay'
+#   2
+# france
+
+# def cryptic_conversion(sentence):
+#     # your code here
+#     sentence = sentence.split()
+#     wreturn = ''
+#     sreturn = ''
+#     nvset = ''
+#     vset = ''
+#     for i in sentence:
+#         wreturn = i
+#         if len(i) >= 3:
+#             if i.lower().startswith('a') or i.lower().startswith('e') or i.lower().startswith('i') or i.lower().startswith('o') or i.lower().startswith('u'):
+#                 wreturn += 'yay'
+#             else:
+#                 continuecons = True
+#                 conscount = -1
+#                 vset = ''
+#                 nvset = ''
+#                 for u in i:
+#                     if u.lower() == 'a' or u.lower() == 'e' or u.lower() == 'i' or u.lower() == 'o' or u.lower() == 'u':
+#                         continuecons = False
+#                     else:
+#                         if continuecons == True:
+#                             nvset += u
+#                     if continuecons == False:
+#                         vset += u
+#                 wreturn = vset + nvset + 'ay'
+#         sreturn = sreturn + ' ' + wreturn
+#     return sreturn
 
 
 
