@@ -139,6 +139,38 @@ print('_____________________________________________________')
 
 def cryptic_conversion(sentence):
     # your code here
+    sentence = sentence.split()
+    wreturn = ''
+    sreturn = ''
+    nvset = ''
+    vset = ''
+    for i in sentence:
+        wreturn = i
+        if len(i) >= 3:
+            if i.lower().startswith('a') or i.lower().startswith('e') or i.lower().startswith('i') or i.lower().startswith('o') or i.lower().startswith('u'):
+                wreturn += 'yay'
+            else:
+                continuecons = True
+                conscount = -1
+                vset = ''
+                nvset = ''
+                for u in i:
+                    if u.lower() == 'a' or u.lower() == 'e' or u.lower() == 'i' or u.lower() == 'o' or u.lower() == 'u':
+                        continuecons = False
+                    else:
+                        if continuecons == True:
+                            nvset += u
+                    if continuecons == False:
+                        vset += u
+                wreturn = vset + nvset + 'ay'
+        sreturn = sreturn + ' ' + wreturn
+    return sreturn
+
+
+
+
+
+
 
 print(cryptic_conversion('We like to eat bananas')) # "We ikelay to eatyay ananasbay"
 print(cryptic_conversion('I cannot find the trash')) # "I annotcay indfay ethay ashtray"
